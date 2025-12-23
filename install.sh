@@ -323,6 +323,45 @@ main() {
         echo "Installation cancelled."
         exit 0
     fi
+
+    #add directories
+    #!/bin/bash
+
+echo "🔧 Jarvis Assistant - Smart Installer"
+echo "======================================"
+
+# Auto-create directories
+mkdir -p logs images examples
+
+# Auto-create log file
+touch logs/jarvis.log 2>/dev/null || true
+
+# Auto-create configs if missing
+if [ ! -f "config.json" ]; then
+    echo '{
+        "wake_word": "hey jarvis",
+        "version": "2.2.0",
+        "license": "MIT"
+    }' > config.json
+    echo "✅ Created config.json"
+fi
+
+if [ ! -f "apps_config.json" ]; then
+    echo '{
+        "applications": {},
+        "system_commands": {}
+    }' > apps_config.json
+    echo "✅ Created apps_config.json"
+fi
+
+echo ""
+echo "📁 Directory structure created:"
+echo "   logs/          - Log files"
+echo "   images/        - Screenshots"
+echo "   examples/      - Example configs"
+echo ""
+echo "🎉 Jarvis is ready to use!"
+echo "👉 Run: python jarvis.py"
     
     # Run installation steps
     check_requirements
