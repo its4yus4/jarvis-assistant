@@ -1,7 +1,7 @@
 @echo off
 echo Jarvis Assistant - Auto Setup
 echo =============================
-
+ 
 REM Create directories if they don't exist
 if not exist logs mkdir logs
 if not exist images mkdir images
