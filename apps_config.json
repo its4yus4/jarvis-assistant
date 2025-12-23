@@ -1,0 +1,6 @@
+{
+  "your_app": {
+    "path": "/Applications/YourApp.app",
+    "commands": ["your app", "alias"]
+  }
+}
