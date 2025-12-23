@@ -1,0 +1,5 @@
+{
+  "wake_word": "hey jarvis",
+  "listen_timeout": 7,
+  "phrase_time_limit": 8
+}
